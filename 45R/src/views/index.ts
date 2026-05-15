@@ -15,5 +15,5 @@ export * from '@/views/site/NowPlayingView';
 export * from '@/views/site/SearchView';
 export * from '@/views/site/TrailersView';
 export * from '@/views/site/TrendingView';
-export * from '@/views/user/FavouriteView';
+export * from '@/views/user/FavoriteView';
 export * from '@/views/user/SettingsView';

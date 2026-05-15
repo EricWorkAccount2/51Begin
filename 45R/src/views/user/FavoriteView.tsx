@@ -1,6 +1,7 @@
-import { FavoritesOverlay, ImageGrid } from '@/components';
+import { ImageGrid } from '@/components';
 import { useUserContext } from '@/hooks';
 import { useNavigate } from 'react-router-dom';
+import { FavoritesOverlay } from '@/components';
 
 export const FavoritesView = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ export const FavoritesView = () => {
         <p className="mt-10 text-gray-400">You have no favorites yet.</p>
       ) : (
         <ImageGrid images={Array.from(favorites.values())} onClick={(image) => navigate(`/movie/${image.id}/credits`)}>
-          {(image) => <FavoritesOverlay image={image} />}
+          {(image) => <FavoritesOverlay item={image} />}
         </ImageGrid>
       )}
     </section>

@@ -4,4 +4,6 @@ export * from '@/core/constants/images';
 export * from '@/core/constants/storage';
 export * from '@/core/types/components';
 export * from '@/core/types/endpoints';
-export * from '@/core/utils/images';
+export * from '@/core/utils/getBackdropUrl';
+export * from '@/core/utils/getImageUrl';
+export * from '@/core/utils/imageActions';

@@ -1,5 +1,6 @@
 import { Button, ImageGrid } from '@/components';
-import { type EpisodeResponse, TV_ENDPOINT, getImageUrl } from '@/core';
+import { type EpisodeResponse, TV_ENDPOINT } from '@/core';
+import { getImageUrl } from '@/core';
 import { useTmdb } from '@/hooks';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ export const EpisodeView = () => {
 
   const gridData = (data?.episodes ?? []).map((result) => ({
     id: result.episode_number,
-    imageUrl: getImageUrl(result.still_path),
+    imageUrl: getImageUrl(result.still_path ?? ""),
     primaryText: `Ep ${result.episode_number}: ${result.name}`,
     secondaryText: result.air_date,
   }));
